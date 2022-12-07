@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Dark Light</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        screens: {
+          'mm': '578px',
+        },
+        fontFamily: {
+          'ubuntu':['Ubuntu', 'sans-serif'],
+          'firacode': ['Fira Code', 'monospace']
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            bgDark: '#121213',
+            bgInputDark: '#444448',
+            bgInputLight: '#D0CFDA',
+            bgIcons: '#ffbc48',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+  </style>
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <script src="./main.js" defer></script>
+</head>
+<body class="dark:bg-bgDark">
+  <header class="max-w-xl m-auto p-12 text-center">
+    <h1 class="text-black dark:text-white font-bold font-ubuntu text-3xl">How can I help you?</h1>
+    <div class="relative">
+      <input class="dark:bg-bgInputDark py-2 px-5 mt-8 text-2xl border-0 rounded-xl text-black bg-bgInputLight w-full outline-bgIcons" id="filter" type="text" placeholder="Filter">
+      <i class="ph-magnifying-glass absolute right-3 bottom-3 dark:text-white text-black text-2xl"></i>
+    </div>
+  </header>
+
+  <main class="max-w-3xl px-8 m-auto my-8">
+    <ul class="grid mm:grid-cols-2 grid-cols-1 gap-4">
+      <li class="rounded-xl bg-bgInputLight p-6 dark:bg-bgInputDark">
+        <div class="flex items-center gap-4">
+          <i class="ph-graduation-cap w-6 h-6 rounded-full bg-bgIcons flex items-center justify-center"></i>
+          <h2 class="text-black dark:text-white font-ubuntu text-xl font-bold">How to start</h2>
+        </div>
+        <p class="text-black dark:text-white font-firacode mt-4">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut maiores eveniet nemo incidunt distinctio et ducimus.
+        </p>
+        <a href="#" class="text-black dark:text-white font-bold mt-4">More</a>
+      </li>
+      <li class="rounded-xl bg-bgInputLight p-6 dark:bg-bgInputDark">
+         <div class="flex items-center gap-4">
+          <i class="ph-bug w-6 h-6 rounded-full bg-bgIcons flex items-center justify-center"></i>
+          <h2 class="text-black font-ubuntu text-xl font-bold dark:text-white">Issues</h2>
+        </div>
+        <p class="text-black font-firacode mt-4 dark:text-white">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut maiores eveniet nemo incidunt distinctio et ducimus.
+        </p>
+        <a href="#" class="text-black font-bold mt-4 dark:text-white">More</a>
+      </li>
+      <li class="rounded-xl bg-bgInputLight p-6 dark:bg-bgInputDark">
+        <div class="flex items-center gap-4">
+          <i class="ph-question w-6 h-6 rounded-full bg-bgIcons flex items-center justify-center"></i>
+          <h2 class="text-black font-ubuntu text-xl font-bold dark:text-white">FAQ</h2>
+        </div>
+        <p class="text-black font-firacode mt-4 dark:text-white">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut maiores eveniet nemo incidunt distinctio et ducimus.
+        </p>
+        <a href="#" class="text-black font-bold mt-4 dark:text-white">More</a>
+      </li>
+      <li class="rounded-xl bg-bgInputLight p-6 dark:bg-bgInputDark">
+        <div class="flex items-center gap-4">
+          <i class="ph-code w-6 h-6 rounded-full bg-bgIcons flex items-center justify-center"></i>
+          <h2 class="text-black font-ubuntu text-xl font-bold dark:text-white">Coding</h2>
+        </div>
+        <p class="text-black font-firacode mt-4 dark:text-white">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, quasi, laborum quisquam fugit aut maiores eveniet nemo incidunt distinctio et ducimus.
+        </p>
+        <a href="#" class="text-black font-bold mt-4 dark:text-white">More</a>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>
+
+
