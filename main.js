@@ -8,25 +8,17 @@ openTheme.addEventListener('click', () => {
   verI.classList.toggle('ph-sun')  
   
   if (verI.classList.contains('ph-sun')) {
-   
-  
+    
     verI.classList.remove('ph-moon')
     document.documentElement.classList.add('dark') 
+   
     localStorage.setItem('theme', 'dark');
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      localStorage.theme = 'dark'
-      //document.documentElement.classList.add('dark')
     
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      
+      localStorage.theme = 'dark'
+      
     }
-
-    // Whenever the user explicitly chooses light mode
-    //localStorage.theme = 'light'
-
-    // Whenever the user explicitly chooses dark mode
-    //localStorage.theme = 'dark'
-    //document.documentElement.classList.add('dark')
-    // Whenever the user explicitly chooses to respect the OS preference
-    //localStorage.removeItem('theme')
 
   }else {
 
