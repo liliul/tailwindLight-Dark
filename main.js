@@ -12,7 +12,7 @@ openTheme.addEventListener('click', () => {
   
     verI.classList.remove('ph-moon')
     document.documentElement.classList.add('dark') 
-    //localStorage.setItem('theme', 'dark');
+    localStorage.setItem('theme', 'dark');
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       localStorage.theme = 'dark'
       //document.documentElement.classList.add('dark')
