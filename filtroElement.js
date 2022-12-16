@@ -17,7 +17,7 @@ function filtraCards() {
       title = title.textContent.toLowerCase();
       
       let filtraText = filtraElement.value.toLowerCase();
-      console.log(filtraText)
+      
       if(!title.includes(filtraText) && !p.includes(filtraText)) {
         card.style.display = 'none'
       }else {
@@ -25,9 +25,11 @@ function filtraCards() {
       }
     }
   }else {
+
     for (let card of cards) {
       card.style.display = 'block'
     }
+
   }
 
 }
