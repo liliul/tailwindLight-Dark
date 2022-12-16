@@ -1,7 +1,10 @@
 let openTheme = document.querySelector('#theme')
 let verI = document.querySelector('#verI')
 
-if (localStorage.theme === 'dark'){document.documentElement.classList.add('dark')}
+if (localStorage.theme === 'dark') {
+  document.documentElement.classList.add('dark')
+  verI.classList.add('ph-sun')
+}
 
 openTheme.addEventListener('click', () => {
   
@@ -30,3 +33,4 @@ openTheme.addEventListener('click', () => {
   }
 
 });
+
